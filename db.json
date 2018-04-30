@@ -1,4 +1,4 @@
-{
+let pokemonData = {
   "pokemons": [
     {
       "height": 10,

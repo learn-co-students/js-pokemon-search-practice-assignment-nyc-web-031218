@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Find all the Pokemons</title>
-    <script type="text/javascript" src="src/index.js"></script>
+    <script src="db.json"></script>
+
 
     <style media="screen">
       body {
@@ -40,8 +41,10 @@
 
       .pokemon-container {
         float:left;
-        width:250px;
-        margin:auto;
+        width:230px;
+        margin:10px;
+        background: #fecd2f;
+        color: #2d72fc;
       }
 
       .center-text {
@@ -50,8 +53,19 @@
 
       .flip-image {
         color:#2d72fc;
+        text-align: center;
       }
+
+      .pokemonImg{
+        position: relative;
+        left: 28%;
+        right: 50%;
+      }
+
+
+
     </style>
+<script type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
     <div id="container">
@@ -64,5 +78,6 @@
         <p><center>There are no Pokémon here</center></p>
       </div>
     </div>
+
   </body>
 </html>
