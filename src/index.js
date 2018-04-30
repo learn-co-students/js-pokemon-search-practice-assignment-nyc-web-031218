@@ -60,12 +60,8 @@ class Pokemon {
     flipCardSection.innerText = "flip card";
 
     flipCardSection.addEventListener('click', function(e) {
-      if (image.src === this.front) {
-        image.src = this.back;
-      } else {
-        image.src = this.front;
-      }
-    }.bind(this) );
+      (image.src === this.front) ? image.src = this.back : image.src = this.front
+    }.bind(this));
 
     //append name, front image, and flip card section to frame
     newPokemonFrame.append(pokemonName, outerImageFrame, flipCardSection);
