@@ -2,6 +2,7 @@
 
 ## Objectives
 
+
 - DOM Manipulation
 - Events and Event Handlers
 - Callbacks
