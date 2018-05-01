@@ -1,8 +1,20 @@
+let pokemonObjects = [];
+
 class Pokemon {
   constructor(name, front, back) {
     this.name = name;
     this.front = front;
     this.back = back;
+    pokemonObjects.push(this);
+  }
+
+  static findOrCreateBy(pokemon) {
+    let names = pokemonObjects.map( (pokemonObject) => { return pokemonObject.name });
+    if (names.find( (name) => { return name === pokemon.name })) {
+      return pokemonObjects.find( (pokemonObject) => { return pokemonObject.name === pokemon.name });
+    } else {
+      return new Pokemon(pokemon.name, pokemon.sprites["front"], pokemon.sprites["back"]);
+    }
   }
 
   static findPokemon(search) {
@@ -21,7 +33,7 @@ class Pokemon {
     let searchValue = document.getElementById("pokemon-search-input").value.toLowerCase();
     let filteredPokemon = Pokemon.findPokemon(searchValue);
     filteredPokemon.forEach( (pokemon) => {
-      const newPokemon = new Pokemon(pokemon.name, pokemon.sprites["front"], pokemon.sprites["back"]);
+      const newPokemon = Pokemon.findOrCreateBy(pokemon)
       pokemonContainer.append(newPokemon.render());
     } );
   }
