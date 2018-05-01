@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Find all the Pokemons</title>
     <script type="text/javascript" src="src/index.js"></script>
-
+    <script type="text/javascript" src="src/pokemon.js"></script>
+    <script src="db.json"></script>
     <style media="screen">
       body {
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -51,6 +52,40 @@
       .flip-image {
         color:#2d72fc;
       }
+
+      .poke-card {
+        float: left;
+        background-color: gold;
+        width: 15%;
+        padding: 10px;
+        margin: 10px;
+        height: 250px;
+      }
+      .poke-card:hover {
+        box-shadow: 3px 3px 14px 4px grey;
+      }
+
+      img.pic {
+        padding-left: 3%;
+        padding-top: 24%;
+        height: 150px;
+      }
+
+      #pokemon-container:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      h2 {
+        color: #2951F4;
+        text-align: center;
+      }
+
+/* Clear floats after the columns */
+
+
+
     </style>
   </head>
   <body>
