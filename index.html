@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Find all the Pokemons</title>
+    <script src="db.json"></script>
     <script type="text/javascript" src="src/index.js"></script>
 
     <style media="screen">
@@ -51,6 +52,25 @@
       .flip-image {
         color:#2d72fc;
       }
+
+      #pokemon-logo {
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        /* border-radius:60px; */
+        transition-duration: 1s;
+      }
+
+      #pokemon-logo:hover {
+        /* box-shadow: 0 3px 15px #000; */
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: translate()
+      }
+
     </style>
   </head>
   <body>
