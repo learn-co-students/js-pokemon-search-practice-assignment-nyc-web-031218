@@ -1,4 +1,4 @@
-{
+let {pokemons} = {
   "pokemons": [
     {
       "height": 10,

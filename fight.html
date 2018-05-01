@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokomon Battle!</title>
+    <script src="db.json"></script>
+    <script src="src/fight.js" charset="utf-8"></script>
+
+    <style media="screen">
+      body {
+        background-color: black;
+        background-image: url('https://3dwarehouse.sketchup.com/warehouse/getpubliccontent?contentId=d8b03204-bfe0-4967-bc85-dacaa99772af');
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .container {
+        width: 1000px;
+        padding: 20px;
+        margin: 60px auto;
+        height: 600px;
+        background-color: rgba(0, 0, 0, .4);
+        text-align: center;
+        border-radius: 10px;
+      }
+      h1 {
+        color:white;
+        font-size: 4em;
+        text-transform: uppercase;
+        margin: 20px;
+      }
+
+      button {
+        border: 5px solid #666;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight:bold;
+        background-color: #333;
+        color: #FFF;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .pokemon-container {
+        height: 440px;
+      }
+
+      .pokemon-container .box {
+        float: left;
+        margin: 10px;
+        width: 460px;
+        border: 10px solid rgba(0, 0, 0, .4);
+        height: 100%;
+        border-radius: 10px;
+        position: relative;
+      }
+      .commands {
+        position: absolute;
+        bottom: 0px;
+        align-content: center;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokemon Battle!</h1>
+      <div class="pokemon-container">
+        <div class="box left-pokemon">
+          A lefty goes here
+          <div class="commands">
+            <button type="button" id="leftdraftbutton">Draft</button>
+          </div>
+        </div>
+        <div class="box right-pokemon">
+          A righty goes here
+          <div class="commands">
+            <button type="button" id="rightdraftbutton">Draft</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
